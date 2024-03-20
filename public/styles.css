@@ -87,7 +87,7 @@ html, body, #root {
     font-style: normal;
     font-weight: 200 900;
     font-display: fallback;
-    src: url("/fonts/inter.woff2") format("woff2");
+    src: url("fonts/inter.woff2") format("woff2");
 }
 
 @font-face {
@@ -95,5 +95,5 @@ html, body, #root {
     font-style: normal;
     font-weight: 200 900;
     font-display: fallback;
-    src: url("/fonts/lexend_deca.woff2") format("woff2");
+    src: url("fonts/lexend_deca.woff2") format("woff2");
 }

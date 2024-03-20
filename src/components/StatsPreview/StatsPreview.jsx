@@ -39,10 +39,10 @@ const StatsPreview = () => {
       <Logo>
         <picture>
           <source
-            srcset="/image-header-desktop.jpg"
+            srcset="image-header-desktop.jpg"
             media={QUERIES.laptopAndUp}
           />
-          <img src="/image-header-mobile.jpg" alt="" />
+          <img src="image-header-mobile.jpg" alt="" />
         </picture>
       </Logo>
       <Section>
