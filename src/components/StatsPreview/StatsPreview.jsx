@@ -39,13 +39,14 @@ const StatsPreview = () => {
       <Logo>
         <picture>
           <source
-            srcset="image-header-desktop.jpg"
+            srcSet="image-header-desktop.jpg"
+            type="image/jpeg"
             media={QUERIES.laptopAndUp}
           />
           <img src="image-header-mobile.jpg" alt="" />
         </picture>
       </Logo>
-      <Section>
+      <Content>
         <Header>
           Get <Highlight>insights</Highlight> that help your business grow.
         </Header>
@@ -54,11 +55,11 @@ const StatsPreview = () => {
           regarding revenue, customer experience, and overall efficiency.
         </Description>
         <StatsList>
-          {stats.map((stat, idx) => (
-            <StatItem name={stat.name} value={stat.value} />
+          {stats.map((stat) => (
+            <StatItem key={stat.name} name={stat.name} value={stat.value} />
           ))}
         </StatsList>
-      </Section>
+      </Content>
     </Wrapper>
   );
 };
@@ -67,7 +68,6 @@ const Wrapper = styled.div`
   background-color: var(--color-dark-blue);
 
   max-width: 327px;
-  margin: 0 auto;
 
   border-radius: 8px;
   /* To prevent content spill over rounded corners */
@@ -93,7 +93,7 @@ const Logo = styled.div`
   }
 `;
 
-const Section = styled.section`
+const Content = styled.section`
   padding: 40px 32px 32px 32px;
   flex: 1;
 
@@ -111,6 +111,7 @@ const Header = styled.h1`
   font-size: ${28 / 16}rem;
   font-weight: ${WEIGHTS.bold};
   text-align: center;
+  line-height: 1.15;
 
   @media ${QUERIES.laptopAndUp} {
     font-size: ${36 / 16}rem;
@@ -124,7 +125,7 @@ const Highlight = styled.em`
 `;
 
 const Description = styled.p`
-  margin-top: 16px;
+  margin-top: 14px;
   color: var(--color-white-a75);
   text-align: center;
   line-height: 1.65;

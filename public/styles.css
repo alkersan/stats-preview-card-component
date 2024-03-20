@@ -82,6 +82,10 @@ html, body, #root {
     height: 100%;
 }
 
+body {
+    background-color: var(--color-very-dark-blue);
+}
+
 @font-face {
     font-family: "Inter";
     font-style: normal;
