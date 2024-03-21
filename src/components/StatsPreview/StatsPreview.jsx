@@ -89,7 +89,7 @@ const Logo = styled.div`
     display: block;
     width: 100%;
     mix-blend-mode: multiply;
-    filter: brightness(110%);
+    filter: opacity(75%);
   }
 `;
 
