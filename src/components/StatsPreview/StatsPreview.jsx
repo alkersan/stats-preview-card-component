@@ -5,14 +5,14 @@ import { QUERIES, WEIGHTS } from "../../constants.js";
 const StatItem = ({ name, value }) => {
   return (
     <StatsItemWrapper>
-      <h3>{value}</h3>
+      <h2>{value}</h2>
       <p>{name}</p>
     </StatsItemWrapper>
   );
 };
 
 const StatsItemWrapper = styled.li`
-  h3 {
+  h2 {
     font-size: ${24 / 16}rem;
     font-weight: ${WEIGHTS.bold};
     color: var(--color-white);
